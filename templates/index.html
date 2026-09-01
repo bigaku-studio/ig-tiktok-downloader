@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IG & TikTok Downloader</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <main class="card">
+    <div class="badge">Lokaler Downloader</div>
+    <h1>Instagram &amp; TikTok<br>Downloader</h1>
+    <p class="subtitle">Link einfügen und herunterladen. Videos, Fotos &amp; Karusselle.</p>
+
+    <form id="download-form">
+      <input
+        type="url"
+        id="url-input"
+        placeholder="https://www.instagram.com/reel/... oder https://www.tiktok.com/@user/video/..."
+        required
+        autocomplete="off"
+        spellcheck="false"
+      >
+      <button type="submit" id="download-btn">
+        <span class="btn-label">Herunterladen</span>
+        <span class="spinner" hidden></span>
+      </button>
+    </form>
+
+    <p id="status" class="status" role="status"></p>
+
+    <p class="hint">Nur für privaten Gebrauch. Bitte Urheberrechte beachten.</p>
+  </main>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
